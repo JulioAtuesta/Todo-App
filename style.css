@@ -37,7 +37,7 @@ main {
     margin-top: 10%;
 }
 
-.todo__front-input{
+#todo__front-input{
     width: 80%;
     max-width: 400px;
     padding: 0.3rem;
@@ -45,7 +45,7 @@ main {
     border-radius: 5px;
 }
 
-.todo__front-button{
+#todo__front-button{
     width: 20%;
     max-width: 100px;
     padding: 0.3rem;   
