@@ -9,6 +9,7 @@ function addTask(evento){
     inputText.value = "";
     tasksUl.appendChild(newTask); 
     _isChecked();
+    deleteTask();
 };
 
 function createTask(contenido){
@@ -37,34 +38,29 @@ function _isChecked(){
     for (const i of checked){
         console.log(checked);
         console.log(i);
+        //añadir un break cada que se ejecute la funciòn
         i.addEventListener("click", taskDone =()=>{
             if(i.checked){
-                console.log(i.parentNode);
-                i.parentNode.style.cssText="text-decoration:line-through;";
+                console.log(i.parentNode.childNodes[1]);
+                i.parentNode.childNodes[1].style.cssText="text-decoration:line-through;";
+                i.parentNode.style.opacity="0.7";
             }else{
-                i.parentNode.style.cssText="text-decoration:none;";
+                i.parentNode.childNodes[1].style.cssText="text-decoration:none;";
+                i.parentNode.style.opacity="1";
             }
         });  
-        /*
-//esto no funciona no ejecuta en "tiempo real" el llamado al taskdone el listener si lo hace
-            taskDone;}*/ 
     }
 };
 
-/*
-function taskDone(){
-    console.log('llamado');
-    if(i.checked){
-        console.log('done');
+function deleteTask(){
+    const deleting = document.getElementsByClassName("removeTask");
+    for (const i of deleting){
+        i.addEventListener("click", taskDone =()=>{
+            console.log('borrando');
+            i.parentNode.remove();
+        });
     }
-//    text-decoration:line-through
-if(i.checked){
-    console.log(`la tarea ${i + 1} is checked`);
-}else{ 
-    console.log(`la tarea ${i + 1} not checked`);
-}
 };
-*/
 
 function main(){
     const add_button = document.getElementById("todo__front-button");
