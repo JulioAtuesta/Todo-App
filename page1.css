@@ -86,12 +86,22 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin: 5px 0px;
+  margin: 15px auto;
+  padding: 10px;
 }
 .checkTask{
   cursor: pointer;
+  margin: 15px;
+  transform: scale(1.6);
 }
 
+.removeTask{
+  height: 35px;
+  width: 40px; 
+  max-height: 40px;
+  margin: auto;
+  margin-left: 8px;
+}
 
 .removeTask:hover{
   cursor: pointer;

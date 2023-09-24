@@ -5,7 +5,6 @@ function addTask(evento){
     if(inputText.value == ''){return(1)};
     const tasksUl = document.getElementById("todo__front-list");
     const newTask = createTask(inputText); 
-    console.log(newTask);
     inputText.value = "";
     tasksUl.appendChild(newTask); 
     _isChecked();
@@ -15,10 +14,17 @@ function addTask(evento){
 function createTask(contenido){
     let lisElement = document.createElement("li");
         lisElement.setAttribute("id","todo__front-list-li"); //newTask.classList.add("clase")
+//lisElement.setAttribute("padding","1rem");
+/*
+!poner margenes */
     let check = document.createElement("input");
         check.setAttribute("type","checkbox");
+        check.setAttribute("margin","5px");
         check.classList.add("checkTask")
     let content = document.createElement("span");
+// content.setAttribute("margin","5px")
+/*
+!poner margenes */
         content.innerText = contenido.value; 
 //para el span funciono inner text, pero para el input fue value, ambos ahcen referencia al texto entre la etiqueta <>éste</>
     let remove = document.createElement("button")
@@ -38,7 +44,9 @@ function _isChecked(){
     for (const i of checked){
         console.log(checked);
         console.log(i);
-        //añadir un break cada que se ejecute la funciòn
+        /*
+!        //añadir un break cada que se ejecute la funciòn? para que
+*/
         i.addEventListener("click", taskDone =()=>{
             if(i.checked){
                 console.log(i.parentNode.childNodes[1]);
@@ -57,7 +65,12 @@ function deleteTask(){
     for (const i of deleting){
         i.addEventListener("click", taskDone =()=>{
             console.log('borrando');
-            i.parentNode.remove();
+            if(i.parentNode.childNodes[0].checked){    
+                i.parentNode.remove();
+            }else{
+                console.log("pop up de confirmaciòn, la tarea no esta done quiere eliminarla?")
+                //*poner pop up aqui
+            }
         });
     }
 };
