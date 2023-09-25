@@ -69,7 +69,24 @@ function deleteTask(){
                 i.parentNode.remove();
             }else{
                 console.log("pop up de confirmaciòn, la tarea no esta done quiere eliminarla?")
-                //*poner pop up aqui
+                let popup = document.getElementsByClassName('popup__contenedor');
+                console.log(popup);
+                popup[0].setAttribute('id','popup_descubierto');
+/*                popup.style.visibility='visible';
+                popup.style.top='50%';
+                popup.style.transform='translate(-50%,-50%) scale(1)';
+*/
+                const confirmation = document.getElementById('popup__button-confirm');
+                confirmation.addEventListener('click',deleteConfirmation=()=>{
+                    popup[0].removeAttribute('id');
+                    i.parentNode.remove();
+                })
+
+                const cancelation = document.getElementById('popup__button-cancel');
+                cancelation.addEventListener('click',deleteCancelation=()=>{
+                    popup[0].removeAttribute('id');
+                })
+
             }
         });
     }
