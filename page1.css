@@ -78,7 +78,7 @@ form {
 
 #todo__front-list-li {
   width: 90%;
-  max-width: 630px;
+  max-width: 660px;
   padding: 15px;
   box-shadow: 2px 4px 4px 4px rgba(173, 161, 161, 0.329);
   background-color: aliceblue;
@@ -89,17 +89,21 @@ form {
   align-content: center;
   margin: 15px auto;
 }
+
+span{
+  margin: 0 15px;
+}
 .checkTask{
   cursor: pointer;
-  margin: 15px;
   transform: scale(1.6);
+  margin-right: 5px;
 }
 
 .removeTask{
   height: 35px;
-  width: 40px; 
+  width: 45px; 
   max-height: 40px;
-  margin-left: 8px;
+  margin: auto 0;
 }
 
 .removeTask:hover{
