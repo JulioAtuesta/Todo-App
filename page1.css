@@ -78,7 +78,7 @@ form {
 #todo__front-list-li {
   width: 90%;
   max-width: 660px;
-  padding: 15px;
+  padding: 5px 15px 5px 15px;
   box-shadow: 2px 4px 4px 4px rgba(173, 161, 161, 0.329);
   background-color: aliceblue;
   border: none;
@@ -86,7 +86,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-content: baseline;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 span{

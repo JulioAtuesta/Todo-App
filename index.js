@@ -62,9 +62,10 @@ function _isChecked(){
 
 function deleteTask(){
     const deleting = document.getElementsByClassName("removeTask");
+    console.log(deleting);
     for (const i of deleting){
         i.addEventListener("click", taskDone =()=>{
-            console.log('borrando');
+            console.log(i);
             if(i.parentNode.childNodes[0].checked){    
                 i.parentNode.remove();
             }else{
@@ -80,11 +81,13 @@ function deleteTask(){
                 confirmation.addEventListener('click',deleteConfirmation=()=>{
                     popup[0].removeAttribute('id');
                     i.parentNode.remove();
+                    console.log(i);
                 })
 
                 const cancelation = document.getElementById('popup__button-cancel');
                 cancelation.addEventListener('click',deleteCancelation=()=>{
                     popup[0].removeAttribute('id');
+                    console.log(i);
                 })
 
             }
