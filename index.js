@@ -64,32 +64,25 @@ function deleteTask(){
     const deleting = document.getElementsByClassName("removeTask");
     console.log(deleting);
     for (const i of deleting){
-        i.addEventListener("click", taskDone =()=>{
+        i.addEventListener("click", deletingTask =()=>{
             console.log(i);
             if(i.parentNode.childNodes[0].checked){    
                 i.parentNode.remove();
             }else{
-                console.log("pop up de confirmaciòn, la tarea no esta done quiere eliminarla?")
                 let popup = document.getElementsByClassName('popup__contenedor');
-                console.log(popup);
                 popup[0].setAttribute('id','popup_descubierto');
-/*                popup.style.visibility='visible';
-                popup.style.top='50%';
-                popup.style.transform='translate(-50%,-50%) scale(1)';
-*/
                 const confirmation = document.getElementById('popup__button-confirm');
                 confirmation.addEventListener('click',deleteConfirmation=()=>{
                     popup[0].removeAttribute('id');
                     i.parentNode.remove();
-                    console.log(i);
                 })
-
                 const cancelation = document.getElementById('popup__button-cancel');
                 cancelation.addEventListener('click',deleteCancelation=()=>{
                     popup[0].removeAttribute('id');
                     console.log(i);
+                    // como 'desmarcar' al elemento i
+                    return(0);
                 })
-
             }
         });
     }
