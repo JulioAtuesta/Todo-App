@@ -62,7 +62,6 @@ function _isChecked(){
 
 function deleteTask(){
     const deleting = document.getElementsByClassName("removeTask");
-    console.log(deleting);
     for (const i of deleting){
         i.addEventListener("click", deletingTask =()=>{
             console.log(i);
