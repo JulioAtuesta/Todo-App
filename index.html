@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page1.css">
+    <title>To Do</title>
+</head>
+<body>
+    <main>
+        <section class="icono"><img src="icons8-luz-encendida-80.png" /></section>
+        <section class="todo__front">
+            <form action="" class="todo__front-form">
+                <input
+                id="todo__front-input" 
+                type="text" 
+                placeholder="New task" 
+                autocomplete="off"
+                data-form-input />
+                <button type="submit" id="todo__front-button" data-form-btn>Add</button>
+            </form>
+            <ul id="todo__front-list">
+            </ul>
+            
+            <div class="popup__contenedor">
+                <div id="popup__elements">
+                    <i id="popup__icon">⚠️</i>
+                    <p id="popup__texto">¡Eliminar tarea no completada!</p>
+                    <button id="popup__button-confirm">Confirmar</button>
+                    <button id="popup__button-cancel">Cancelar</button>
+                </div>
+            </div>
+        </section>
+        </main>
+    <footer>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
+

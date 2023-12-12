@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+}
+  
+main {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(32, 67, 88, 0.726) 11.2%,
+      rgba(35, 23, 78, 0.89) 100.2%
+    );
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.icono{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+
+}
+
+.todo__front{
+    display: flex;
+}
+
+.todo__front-form{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 10%;
+}
+
+#todo__front-input{
+    width: 80%;
+    max-width: 400px;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#todo__front-button{
+    width: 20%;
+    max-width: 100px;
+    padding: 0.3rem;   
+    border: none;
+    border-radius: 5px;
+      background-image: linear-gradient(
+      109.6deg,
+      rgba(180, 179, 178, 0.356) 11.2%,
+      rgba(204, 202, 198, 0.425) 100.2%
+    );
+}
+
+#todo__front-list {
+    width: 90%;
+    padding: 15px;
+    box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 5px 0px;
+    position: relative;
+  }
+
+  .cardsList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    max-height: 60vh;
+    height: 60vh;
+  }
